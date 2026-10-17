@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saim | AI Video Ads for DTC Brands · SKD Media</title>
+<meta name="description" content="Performance video ads for DTC brands: AI UGC, UGC and Pixar/clay-style ads. Researched, scripted and delivered by Saim at SKD Media.">
+<meta property="og:title" content="Saim | AI Video Ads for DTC Brands">
+<meta property="og:description" content="AI UGC, UGC and Pixar/clay-style performance ads for DTC brands. Fixed-scope batches of 5, 10 or 15 concepts.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0e0e12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238b5cf6'/%3E%3Cstop offset='1' stop-color='%23ff6b6b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230e0e12'/%3E%3Ctext x='32' y='45' font-family='Arial Black,Arial,sans-serif' font-size='38' font-weight='900' text-anchor='middle' fill='url(%23g)'%3ES%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0e0e12;
+    --bg-2:#15151c;
+    --card:#1a1a23;
+    --line:rgba(255,255,255,.09);
+    --text:#f4f4f7;
+    --muted:#a2a2b2;
+    --purple:#8b5cf6;
+    --coral:#ff6b6b;
+    --grad:linear-gradient(120deg,var(--purple),var(--coral));
+    --radius:18px;
+    --maxw:1120px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);color:var(--text);
+    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    line-height:1.6;-webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{font-family:'Space Grotesk','Inter',sans-serif;line-height:1.1;letter-spacing:-.02em}
+  a{color:inherit}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 20px}
+  .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* nav */
+  header{
+    position:sticky;top:0;z-index:20;
+    background:rgba(14,14,18,.82);backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.15rem;text-decoration:none;display:flex;align-items:baseline;gap:8px}
+  .brand small{font-family:'Inter',sans-serif;font-weight:500;font-size:.72rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+  .nav ul{display:flex;gap:26px;list-style:none;align-items:center}
+  .nav ul a{text-decoration:none;color:var(--muted);font-size:.92rem;transition:color .15s}
+  .nav ul a:hover{color:var(--text)}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    padding:13px 24px;border-radius:999px;border:0;cursor:pointer;
+    font:600 .95rem 'Inter',sans-serif;text-decoration:none;color:#fff;
+    background:var(--grad);transition:transform .15s, box-shadow .15s;
+    box-shadow:0 8px 28px -10px rgba(255,107,107,.55);
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn.ghost{background:transparent;border:1px solid var(--line);box-shadow:none;color:var(--text)}
+  .btn.ghost:hover{border-color:rgba(255,255,255,.3)}
+  .btn.small{padding:9px 18px;font-size:.85rem}
+
+  /* hero */
+  .hero{padding:72px 0 40px;position:relative;overflow:hidden}
+  .hero::before{
+    content:"";position:absolute;inset:-20% -10% auto auto;width:640px;height:640px;
+    background:radial-gradient(circle,rgba(139,92,246,.28),transparent 65%);
+    pointer-events:none;
+  }
+  .hero::after{
+    content:"";position:absolute;left:-12%;top:30%;width:520px;height:520px;
+    background:radial-gradient(circle,rgba(255,107,107,.16),transparent 65%);
+    pointer-events:none;
+  }
+  .hero .wrap{position:relative;z-index:1}
+  .eyebrow{
+    display:inline-block;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--muted);border:1px solid var(--line);padding:6px 14px;border-radius:999px;margin-bottom:22px;
+  }
+  .hero h1{font-size:clamp(2.4rem,6.2vw,4.6rem);max-width:15ch}
+  .hero p.lead{margin-top:22px;max-width:58ch;font-size:1.12rem;color:var(--muted)}
+  .hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+  .stats{display:flex;gap:34px;flex-wrap:wrap;margin-top:40px}
+  .stat b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.7rem}
+  .stat span{color:var(--muted);font-size:.85rem}
+
+  .hero-video{margin-top:48px}
+
+  /* video facade */
+  .facade{
+    position:relative;display:block;width:100%;border:0;padding:0;cursor:pointer;
+    border-radius:var(--radius);overflow:hidden;background:#000;
+    box-shadow:0 30px 80px -30px rgba(139,92,246,.45);
+    border:1px solid var(--line);
+  }
+  .facade img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s, opacity .2s;opacity:.92}
+  .facade:hover img{transform:scale(1.03);opacity:1}
+  .facade .play{
+    position:absolute;inset:0;margin:auto;width:68px;height:68px;border-radius:50%;
+    background:var(--grad);display:grid;place-items:center;
+    box-shadow:0 10px 34px -8px rgba(255,107,107,.7);transition:transform .2s;
+  }
+  .facade:hover .play{transform:scale(1.1)}
+  .facade .play::before{
+    content:"";margin-left:5px;border-style:solid;border-width:10px 0 10px 17px;
+    border-color:transparent transparent transparent #fff;
+  }
+  .facade .tag{
+    position:absolute;left:12px;bottom:12px;font-size:.74rem;font-weight:600;
+    background:rgba(14,14,18,.78);backdrop-filter:blur(6px);padding:5px 11px;border-radius:999px;
+  }
+  .facade:focus-visible,.btn:focus-visible,a:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
+  .player{position:relative;width:100%;border-radius:var(--radius);overflow:hidden;background:#000;border:1px solid var(--line)}
+  .player iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .hero-video .facade,.hero-video .player{aspect-ratio:16/9}
+
+  /* sections */
+  section{padding:84px 0}
+  .section-head{margin-bottom:38px;max-width:60ch}
+  .section-head .kicker{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--coral);margin-bottom:12px}
+  .section-head h2{font-size:clamp(1.9rem,4vw,2.9rem)}
+  .section-head p{margin-top:14px;color:var(--muted)}
+
+  /* work */
+  #work{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .cat{margin-bottom:54px}
+  .cat:last-child{margin-bottom:0}
+  .cat h3{font-size:1.45rem;margin-bottom:6px;display:flex;align-items:center;gap:12px}
+  .cat h3 .count{font-family:'Inter',sans-serif;font-size:.75rem;font-weight:600;color:var(--muted);border:1px solid var(--line);padding:3px 10px;border-radius:999px}
+  .cat p.blurb{color:var(--muted);font-size:.95rem;margin-bottom:20px;max-width:62ch}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:16px}
+  .grid .facade,.grid .player{aspect-ratio:9/16}
+  .grid.wide{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
+  .grid.wide .facade,.grid.wide .player{aspect-ratio:16/9}
+
+  /* packages */
+  .packs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+  .pack{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:30px 26px;display:flex;flex-direction:column;gap:14px;transition:border-color .2s, transform .2s;
+  }
+  .pack:hover{border-color:rgba(255,255,255,.22);transform:translateY(-3px)}
+  .pack .num{font-family:'Space Grotesk',sans-serif;font-size:3.2rem;font-weight:700;line-height:1}
+  .pack .unit{color:var(--muted);font-size:.9rem;margin-top:-6px}
+  .pack .time{
+    font-size:.85rem;font-weight:600;padding:7px 12px;border-radius:10px;background:rgba(139,92,246,.14);
+    color:#cdbcff;align-self:flex-start;
+  }
+  .pack ul{list-style:none;display:grid;gap:9px;margin:6px 0 10px;color:var(--muted);font-size:.93rem}
+  .pack li{padding-left:24px;position:relative}
+  .pack li::before{content:"";position:absolute;left:0;top:.55em;width:12px;height:2px;background:var(--grad);border-radius:2px}
+  .pack .btn{margin-top:auto}
+  .note{margin-top:22px;color:var(--muted);font-size:.9rem}
+
+  /* process */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;counter-reset:s}
+  .step{
+    border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;background:var(--card);counter-increment:s;
+  }
+  .step::before{
+    content:"0" counter(s);font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.5rem;
+    background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .step h3{font-size:1.15rem;margin:10px 0 6px}
+  .step p{color:var(--muted);font-size:.93rem}
+
+  /* contact */
+  #contact{padding-top:40px}
+  .cta{
+    border-radius:26px;padding:56px 28px;text-align:center;position:relative;overflow:hidden;
+    background:linear-gradient(135deg,rgba(139,92,246,.2),rgba(255,107,107,.16)),var(--card);
+    border:1px solid var(--line);
+  }
+  .cta h2{font-size:clamp(1.9rem,4.4vw,3rem);max-width:20ch;margin:0 auto}
+  .cta p{color:var(--muted);margin:14px auto 28px;max-width:52ch}
+  .cta .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+  footer{padding:34px 0 50px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line)}
+  footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+  @media (max-width:720px){
+    .nav ul li:not(:last-child){display:none}
+    .hero{padding-top:48px}
+    section{padding:64px 0}
+    .grid{grid-template-columns:repeat(2,1fr);gap:12px}
+    .grid.wide{grid-template-columns:1fr}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *{transition:none !important}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">Saim <small>SKD Media</small></a>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a class="btn small" href="#contact" data-contact-link>Get in touch</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="wrap">
+      <span class="eyebrow">AI video ads for DTC brands</span>
+      <h1>Video ads built to <span class="grad-text">sell</span>, not just look good.</h1>
+      <p class="lead">
+        AI UGC, UGC and Pixar/clay-style performance ads, researched, scripted and delivered ready to run.
+        Work with me directly, or through my studio, SKD Media.
+      </p>
+      <div class="hero-cta">
+        <a class="btn" href="#packages">See packages</a>
+        <a class="btn ghost" href="#work">Watch my work</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>300+</b><span>videos delivered</span></div>
+        <div class="stat"><b>5+ yrs</b><span>in video editing</span></div>
+        <div class="stat"><b>DTC</b><span>e-commerce focus</span></div>
+      </div>
+      <div class="hero-video" id="hero-video"></div>
+    </div>
+  </div>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Selected work</div>
+        <h2>Ads across three styles</h2>
+        <p>Tap any video to play it. Each style suits a different kind of product and audience.</p>
+      </div>
+      <div id="work-cats"></div>
+    </div>
+  </section>
+
+  <section id="packages">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Packages</div>
+        <h2>One-time batches, fixed scope</h2>
+        <p>Pick the number of concepts. Everything from research to finished ads is included, and I cover the AI generation costs.</p>
+      </div>
+      <div class="packs">
+        <article class="pack">
+          <div><div class="num">5</div><div class="unit">concepts</div></div>
+          <div class="time">Delivered in about 15-20 days</div>
+          <ul>
+            <li>Research and winning angles</li>
+            <li>One script per concept with multiple hooks</li>
+            <li>Finished ads in 9:16 and 4:5</li>
+            <li>AI generation costs covered</li>
+          </ul>
+          <a class="btn ghost" href="#contact" data-contact-link>Get a quote</a>
+        </article>
+        <article class="pack">
+          <div><div class="num">10</div><div class="unit">concepts</div></div>
+          <div class="time">Delivered in about 1 month</div>
+          <ul>
+            <li>Research and winning angles</li>
+            <li>One script per concept with multiple hooks</li>
+            <li>Finished ads in 9:16 and 4:5</li>
+            <li>AI generation costs covered</li>
+          </ul>
+          <a class="btn" href="#contact" data-contact-link>Get a quote</a>
+        </article>
+        <article class="pack">
+          <div><div class="num">15</div><div class="unit">concepts</div></div>
+          <div class="time">Delivered in about 1.5 months</div>
+          <ul>
+            <li>Research and winning angles</li>
+            <li>One script per concept with multiple hooks</li>
+            <li>Finished ads in 9:16 and 4:5</li>
+            <li>AI generation costs covered</li>
+          </ul>
+          <a class="btn ghost" href="#contact" data-contact-link>Get a quote</a>
+        </article>
+      </div>
+      <p class="note">Pricing depends on the batch size and the style of ad. Get in touch for a quote.</p>
+    </div>
+  </section>
+
+  <section id="process" style="background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">How it works</div>
+        <h2>From brief to ads you can run</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>Research</h3><p>I study your product, customers and competitors to find the angles worth testing.</p></div>
+        <div class="step"><h3>Scripts and hooks</h3><p>Each concept gets a script with several hooks, so you can test what stops the scroll.</p></div>
+        <div class="step"><h3>Production</h3><p>AI and editing tools bring each concept to life in the style that fits your brand.</p></div>
+        <div class="step"><h3>Delivery</h3><p>Finished ads arrive in 9:16 and 4:5, ready to upload to your ad accounts.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="cta">
+        <h2>Let's make ads your customers <span class="grad-text">stop for</span></h2>
+        <p>Tell me about your brand and what you want to test. I'll reply with a plan and a quote.</p>
+        <div class="row" id="contact-row"></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Saim &middot; SKD Media</span>
+    <span>AI video ads for DTC brands</span>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   EDIT THIS BLOCK TO UPDATE THE SITE
+   ============================================================ */
+
+// Contact details. Leave a value empty ("") to hide that button.
+const CONTACT = {
+  email: "",      // e.g. "you@example.com"
+  linkedin: "",   // e.g. "https://www.linkedin.com/in/your-profile"
+  booking: ""     // e.g. a Calendly link
+};
+
+// Main video at the top of the page (YouTube video ID).
+const LANDING_VIDEO = "RBaVs9u_E5k";
+
+// Portfolio. Add a video by adding its YouTube ID to a list.
+// ratio: "9/16" for vertical videos, "16/9" for horizontal ones.
+const SECTIONS = [
+  {
+    title: "AI UGC Ads",
+    blurb: "Creator-style ads made with AI presenters, fast to produce and easy to test at scale.",
+    ratio: "9/16",
+    videos: ["jdq0-7Qycpo"]
+  },
+  {
+    title: "AI Pixar / Clay Ads",
+    blurb: "Animated, character-led ads that make a product memorable and stand out in the feed.",
+    ratio: "9/16",
+    videos: ["9Wb6cQucBeI", "BbijnKuV9do", "8hP5wcqenX4", "ijxTotihXSE", "EreXmCkY9gI"]
+  },
+  {
+    title: "UGC Ads",
+    blurb: "Authentic, real-person style ads built around a strong hook and a clear offer.",
+    ratio: "9/16",
+    videos: ["0S1i42W0-g8", "yawOviPwCAQ"]
+  }
+];
+
+/* ============================================================
+   Code below does not need to be edited
+   ============================================================ */
+
+function thumb(id){ return "https://i.ytimg.com/vi/" + id + "/hqdefault.jpg"; }
+
+function makeFacade(id, label, ratio){
+  var btn = document.createElement("button");
+  btn.className = "facade";
+  btn.type = "button";
+  btn.setAttribute("aria-label", "Play video: " + label);
+  if (ratio) btn.style.aspectRatio = ratio;
+  var img = document.createElement("img");
+  img.src = thumb(id);
+  img.alt = label;
+  img.loading = "lazy";
+  img.decoding = "async";
+  var play = document.createElement("span");
+  play.className = "play";
+  btn.appendChild(img);
+  btn.appendChild(play);
+  if (label){
+    var tag = document.createElement("span");
+    tag.className = "tag";
+    tag.textContent = label;
+    btn.appendChild(tag);
+  }
+  btn.addEventListener("click", function(){
+    var box = document.createElement("div");
+    box.className = "player";
+    if (ratio) box.style.aspectRatio = ratio;
+    var f = document.createElement("iframe");
+    f.src = "https://www.youtube-nocookie.com/embed/" + id + "?autoplay=1&rel=0&playsinline=1&modestbranding=1";
+    f.title = label || "Video";
+    f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen";
+    f.allowFullscreen = true;
+    box.appendChild(f);
+    btn.replaceWith(box);
+  });
+  return btn;
+}
+
+// hero video
+document.getElementById("hero-video").appendChild(
+  makeFacade(LANDING_VIDEO, "Watch: how I work and what's in each package", "16/9")
+);
+
+// portfolio sections
+var cats = document.getElementById("work-cats");
+SECTIONS.forEach(function(sec){
+  if (!sec.videos.length) return;
+  var wrap = document.createElement("div");
+  wrap.className = "cat";
+  var h = document.createElement("h3");
+  h.textContent = sec.title + " ";
+  var c = document.createElement("span");
+  c.className = "count";
+  c.textContent = sec.videos.length + (sec.videos.length === 1 ? " video" : " videos");
+  h.appendChild(c);
+  var p = document.createElement("p");
+  p.className = "blurb";
+  p.textContent = sec.blurb;
+  var grid = document.createElement("div");
+  grid.className = "grid" + (sec.ratio === "16/9" ? " wide" : "");
+  sec.videos.forEach(function(id, i){
+    var n = String(i + 1).padStart(2, "0");
+    grid.appendChild(makeFacade(id, sec.title.replace(/s$/, "") + " " + n, sec.ratio));
+  });
+  wrap.appendChild(h);
+  wrap.appendChild(p);
+  wrap.appendChild(grid);
+  cats.appendChild(wrap);
+});
+
+// contact buttons
+var row = document.getElementById("contact-row");
+var primary = null;
+function addBtn(text, href, ghost){
+  var a = document.createElement("a");
+  a.className = "btn" + (ghost ? " ghost" : "");
+  a.href = href;
+  a.textContent = text;
+  if (href.indexOf("http") === 0){ a.target = "_blank"; a.rel = "noopener"; }
+  row.appendChild(a);
+  return a;
+}
+if (CONTACT.booking){ primary = addBtn("Book a call", CONTACT.booking, false); }
+if (CONTACT.email){
+  var e = addBtn("Email me", "mailto:" + CONTACT.email, !!primary);
+  if (!primary) primary = e;
+}
+if (CONTACT.linkedin){
+  var l = addBtn("Message on LinkedIn", CONTACT.linkedin, !!primary);
+  if (!primary) primary = l;
+}
+if (!row.children.length){
+  var s = document.createElement("p");
+  s.style.margin = "0";
+  s.textContent = "Contact details coming soon.";
+  row.appendChild(s);
+}
+// make the "Get in touch" / "Get a quote" buttons go straight to the main contact method
+if (primary){
+  document.querySelectorAll("[data-contact-link]").forEach(function(a){
+    a.href = primary.href;
+    if (primary.target){ a.target = "_blank"; a.rel = "noopener"; }
+  });
+}
+</script>
+</body>
+</html>
