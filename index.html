@@ -192,6 +192,21 @@
   .steps h3{font-size:1.25rem;margin-bottom:8px;letter-spacing:-.015em}
   .steps p{color:var(--muted);font-size:1rem;line-height:1.6}
 
+  /* book a call */
+  .book{padding:clamp(80px,11vw,150px) 0}
+  .book-grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(28px,5vw,72px);align-items:start}
+  .book h2{font-size:clamp(2.2rem,4.8vw,4rem);line-height:1.04}
+  .book .sub{margin-top:18px;font-size:1.15rem;color:var(--muted);max-width:28em}
+  .book-list{list-style:none;display:grid;gap:12px;margin-top:28px;font-weight:600}
+  .book-list li{display:flex;gap:12px;align-items:baseline}
+  .book-list li::before{content:"";flex:none;width:10px;height:10px;border-radius:50%;background:var(--coral);transform:translateY(-1px)}
+  .book h2 mark{white-space:nowrap}
+  .book-note{margin-top:22px;font-size:.92rem;color:var(--muted)}
+  .book-cal{background:#fff;border-radius:28px;padding:8px;box-shadow:0 1px 0 rgba(23,17,43,.06),0 20px 50px -24px rgba(23,17,43,.25)}
+  .cal-embed{min-height:700px;display:grid;place-items:center;border-radius:22px;overflow:hidden}
+  .cal-embed iframe{width:100%;height:700px;border:0;display:block}
+  @media (max-width:900px){.book-grid{grid-template-columns:1fr}.cal-embed,.cal-embed iframe{min-height:640px;height:640px}}
+
   /* contact */
   .contact{background:#1B1438;color:var(--paper);padding:clamp(80px,11vw,150px) 0}
   .split{display:grid;grid-template-columns:5fr 6fr;gap:clamp(28px,6vw,96px);align-items:start}
@@ -249,6 +264,7 @@
       <li><a href="#work">Work</a></li>
       <li><a href="#packages">Packages</a></li>
       <li><a href="#process">Process</a></li>
+      <li><a href="#book">Free call</a></li>
       <li><a class="btn small" href="#contact" data-contact-link>Message me</a></li>
     </ul>
   </div>
@@ -267,7 +283,7 @@
           </p>
           <div class="hero-btns">
             <a class="btn" href="#contact" data-contact-link>Message me on WhatsApp</a>
-            <a class="btn line" href="#work">Watch the work</a>
+            <a class="btn line" href="#book">Book a free call</a>
           </div>
           <ul class="facts">
             <li>Trusted by 7 to 9 figure brands</li>
@@ -366,6 +382,27 @@
         <li><h3>Production and edit</h3><p>AI and editing tools turn each script into a finished ad in the style that fits your brand.</p></li>
         <li><h3>Delivery</h3><p>You receive every ad in 9:16 and 4:5, ready to launch.</p></li>
       </ol>
+    </div>
+  </section>
+
+  <section class="book" id="book">
+    <div class="wrap book-grid">
+      <div class="book-copy">
+        <h2>Book a free <mark>ad review</mark> call</h2>
+        <p class="sub">20 minutes on Google Meet. We look at the ads you're running now and I show you which angles and hooks I'd test next.</p>
+        <ul class="book-list">
+          <li>A quick read on what's working in your current ads</li>
+          <li>2 to 3 hook ideas built for your product</li>
+          <li>Which ad style fits you best: AI UGC, UGC or animated</li>
+          <li>No pitch deck, no pressure. You keep the ideas either way</li>
+        </ul>
+        <p class="book-note">Times show in your own time zone.</p>
+      </div>
+      <div class="book-cal">
+        <div id="cal-embed" class="cal-embed" aria-label="Booking calendar">
+          <a class="btn" id="cal-fallback" href="https://calendly.com/saimkhan00n/creative-strategy-call" target="_blank" rel="noopener">Pick a time on Calendly</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -544,6 +581,30 @@ CONTACT.whatsapp.forEach(function(w){ addLink(w.label, w.display, waLink(w.numbe
 if (CONTACT.linkedin){ addLink("LinkedIn", "Muhammad Saim Khan", CONTACT.linkedin, "linkedin"); }
 if (CONTACT.instagram){ addLink("Instagram", "@saimkhan_16", CONTACT.instagram, "instagram"); }
 if (CONTACT.email){ addLink("Email", CONTACT.email, "mailto:" + CONTACT.email, "email"); }
+
+// booking calendar: load the Calendly page only when the section comes into view
+var CALENDLY_URL = "https://calendly.com/saimkhan00n/creative-strategy-call";
+(function(){
+  var box = document.getElementById("cal-embed");
+  if (!box) return;
+  function load(){
+    if (box.dataset.loaded) return;
+    box.dataset.loaded = "1";
+    var f = document.createElement("iframe");
+    f.src = CALENDLY_URL + "?embed_domain=" + encodeURIComponent(location.hostname || "saimkhan00n-sudo.github.io") +
+            "&embed_type=Inline&hide_gdpr_banner=1&primary_color=5b3cf5";
+    f.title = "Book a free ad review call";
+    f.loading = "lazy";
+    box.innerHTML = "";
+    box.appendChild(f);
+  }
+  if ("IntersectionObserver" in window){
+    var io = new IntersectionObserver(function(entries){
+      if (entries.some(function(e){ return e.isIntersecting; })){ load(); io.disconnect(); }
+    }, { rootMargin: "600px" });
+    io.observe(box);
+  } else { load(); }
+})();
 
 // point the main buttons at the first WhatsApp number
 if (CONTACT.whatsapp.length){
